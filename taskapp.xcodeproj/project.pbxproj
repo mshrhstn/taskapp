@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		094C528C24D2F51400E81051 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094C528B24D2F51400E81051 /* Task.swift */; };
 		09A0B5CC24D19D6800161595 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A0B5CB24D19D6800161595 /* AppDelegate.swift */; };
 		09A0B5CE24D19D6800161595 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A0B5CD24D19D6800161595 /* SceneDelegate.swift */; };
 		09A0B5D024D19D6800161595 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A0B5CF24D19D6800161595 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		094C528B24D2F51400E81051 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		09A0B5C824D19D6800161595 /* taskapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taskapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A0B5CB24D19D6800161595 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09A0B5CD24D19D6800161595 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				09A0B5CB24D19D6800161595 /* AppDelegate.swift */,
+				094C528B24D2F51400E81051 /* Task.swift */,
 				09A0B5CD24D19D6800161595 /* SceneDelegate.swift */,
 				09A0B5CF24D19D6800161595 /* ViewController.swift */,
 				09A0B5DF24D1A89500161595 /* InputViewController.swift */,
@@ -91,7 +94,6 @@
 				FD3D1B5DAF29F442D48CB337 /* Pods-taskapp.debug.xcconfig */,
 				FE727A54E2FBD3DDBC8D1283 /* Pods-taskapp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -212,6 +214,7 @@
 			files = (
 				09A0B5D024D19D6800161595 /* ViewController.swift in Sources */,
 				09A0B5CC24D19D6800161595 /* AppDelegate.swift in Sources */,
+				094C528C24D2F51400E81051 /* Task.swift in Sources */,
 				09A0B5CE24D19D6800161595 /* SceneDelegate.swift in Sources */,
 				09A0B5E024D1A89500161595 /* InputViewController.swift in Sources */,
 			);
