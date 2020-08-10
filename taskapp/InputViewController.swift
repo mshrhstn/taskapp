@@ -54,9 +54,9 @@ class InputViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDat
         var categoryNo = 0
         
         for (index, cat) in datalist.enumerated() {
+            print(passedCategory)
           if(cat == passedCategory){
             categoryNo = index
-            print(categoryNo)
             break
           }
           else {
@@ -67,7 +67,6 @@ class InputViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDat
         // ピッカー設定
         pickerView.delegate = self
         pickerView.dataSource = self
-        print(categoryNo)
         pickerView.selectRow(categoryNo, inComponent: 0, animated: false)
         
         // 背景をタップしたらdismissKeyboardメソッドを呼ぶように設定する
@@ -85,7 +84,9 @@ class InputViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDat
             self.task.title = self.titleTextField.text!
             self.task.contents = self.contentsTextView.text
             self.task.date = self.datePicker.date
+            self.task.category = datalist[self.pickerView.selectedRow(inComponent: 0)]
             self.realm.add(self.task, update: .modified)
+            
         }
         setNotification(task: task)   // 追加
 

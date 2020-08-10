@@ -15,7 +15,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var searchBar: UISearchBar!
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
+        let searchBartext = searchBar.text! //テキスト情報を取る
+        //realm.objects （Product.self ）.filter （ "ANY productTypeList.typeName ==％@"、productTypeName）
+        taskArray = try! Realm().objects(Task.self).filter ("category == %@",searchBartext)
+        tableView.reloadData() //カテゴリのフィルタをかける
+        if searchBartext.isEmpty {
+            //ここに何を入れるか
+        }
     }
     // called when keyboard search button pressed
     //データ
@@ -65,6 +71,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "cellSegue",sender: nil) // ←追加する
     }
+    
     
     // セルが削除が可能なことを伝えるメソッド
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath)-> UITableViewCell.EditingStyle {
