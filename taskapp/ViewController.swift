@@ -18,9 +18,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let searchBartext = searchBar.text! //テキスト情報を取る
         //realm.objects （Product.self ）.filter （ "ANY productTypeList.typeName ==％@"、productTypeName）
         taskArray = try! Realm().objects(Task.self).filter ("category == %@",searchBartext)
-        tableView.reloadData() //カテゴリのフィルタをかける
-        if searchBartext.isEmpty {
-            //ここに何を入れるか
+        //カテゴリのフィルタをかける
+        tableView.reloadData() //tableViewの項目を再読み込みする
+        
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        let searchBartext = searchBar.text! //テキスト情報を取る
+        if searchBartext.isEmpty { //もし検索欄が空欄だったら
+            taskArray = try! Realm().objects(Task.self) //taskArrayの中身を全て表示して、
+            tableView.reloadData() //tableViewの項目を再読み込みします
         }
     }
     // called when keyboard search button pressed

@@ -80,7 +80,7 @@ class InputViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDat
     
     // 追加する
     override func viewWillDisappear(_ animated: Bool) {
-        try! realm.write {
+        try! realm.write { //データベースへ保存する
             self.task.title = self.titleTextField.text!
             self.task.contents = self.contentsTextView.text
             self.task.date = self.datePicker.date
